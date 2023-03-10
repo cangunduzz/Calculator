@@ -7,10 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/95733395b9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
+    <div class="alert hide">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg">Warning: Please enter Number!</span>
+        <span class="close-btn" onclick="closeAlert()">
+            <span class="fas fa-times"></span>
+        </span>
+    </div>
     <div class="calculator">
         <form action="#" name="form">
             <div class="result">
@@ -39,8 +49,8 @@
                     <input type="button" value="0" name="v0" onclick="val(v0.value)">
                     <input type="button" value="." name="vdot" onclick="val(vdot.value)">
                     <input type="button" value="/" name="vdiv" onclick="val(vdiv.value)">
-                    <input type="button" title="İki kere tıklayarak temizleyebilirsiniz" value="=" name="veql"
-                        onclick="calculate()" ondblclick="cleantable()">
+                    <input type="button" class="veql" title="İki kere tıklayarak temizleyebilirsiniz" value="="
+                        name="veql" onclick="calculate()" ondblclick="cleantable()">
                 </div>
             </div>
         </form>
